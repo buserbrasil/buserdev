@@ -20,7 +20,7 @@ Constrói a imagem (ou faz um docker pull)
 ```bash
 ./build.sh
 # ou
-docker pull tonylampada/buserdev
+docker pull buserbrasil/buserdev
 ```
 
 Crie um script pra ativar seu ambdev mais ou menos como o [buserdev.sh](buserdev.sh)

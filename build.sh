@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t tonylampada/buserdev .
+docker build -t buserbrasil/buserdev .

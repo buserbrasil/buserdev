@@ -1,12 +1,12 @@
 #!/bin/bash
 if [[ ! -d ~/.buserdev ]]; then
   mkdir -p ~/.buserdev
-  cid=$(docker create tonylampada/buserdev)
+  cid=$(docker create buserbrasil/buserdev)
   docker cp $cid:/home/developer ~/.buserdev
   docker rm -v $cid
 else 
   # echo nop
-  cid=$(docker create tonylampada/buserdev)
+  cid=$(docker create buserbrasil/buserdev)
   # docker cp $cid:/home/developer ~/.buserdev
   docker rm -v $cid
 fi
@@ -33,4 +33,4 @@ PARAMS="$PARAMS
 docker run -d --rm --net=host --privileged --name=buserdev $PARAMS \
   -v ~/.buserdev/home:/home/developer \
   -v ~/work:/home/developer/work \
-  tonylampada/buserdev terminator # terminator, bash, pycharm... o q vc quiser
+  buserbrasil/buserdev terminator # terminator, bash, pycharm... o q vc quiser
