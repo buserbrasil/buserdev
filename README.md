@@ -1,6 +1,6 @@
 # buserdev
 
-Estou experimentando com a ideia de ter um "ambdev como código" - uma imagem docker que já vem com as ferramentas necessarias pra trabalhar com:
+Estou experimentando com a ideia de ter um "ambdev como código" - uma [imagem docker](https://hub.docker.com/r/buserbrasil/buserdev/) que já vem com as ferramentas necessarias pra trabalhar com:
 * backend em python
 * frontend com vue (ou qq outra coisa que dependa do node)
 * mobile com flutter/android
