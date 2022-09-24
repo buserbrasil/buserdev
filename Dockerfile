@@ -5,6 +5,8 @@ ARG pycharm_source=https://download.jetbrains.com/python/pycharm-community-${PYC
 ARG ANDROID_STUDIO_URL=https://dl.google.com/dl/android/studio/ide-zips/2021.3.1.16/android-studio-2021.3.1.16-linux.tar.gz
 ARG ANDROID_CMDLINETOOLS_URL=https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip
 ARG DEBIAN_FRONTEND=noninteractive
+# talvez vc precise passar algo como --build-arg UID=1001 no seu sistema
+ARG UID=1000
 
 RUN apt-get update && apt-get install -y wget gpg nautilus
 RUN wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg \
@@ -30,8 +32,8 @@ RUN locale-gen en_US.UTF-8 \
   && dpkg-reconfigure locales \
   && locale-gen C.UTF-8 \
   && /usr/sbin/update-locale LANG=C.UTF-8 \
-  && groupadd -g 1000 -r developer \
-  && useradd -u 1000 -g 1000 -ms /bin/bash -r developer \
+  && groupadd -g $UID -r developer \
+  && useradd -u $UID -g $UID -ms /bin/bash -r developer \
   && echo "developer ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-developer \
   && adduser developer kvm \
   && adduser developer plugdev
