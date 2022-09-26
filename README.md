@@ -13,6 +13,10 @@ Olha esse videozinho mostrando como isso é maneiro :-)
 
 [![Ambdev como código](https://img.youtube.com/vi/oR9YbUcfWqI/0.jpg)](https://www.youtube.com/watch?v=oR9YbUcfWqI)
 
+E esse outro videozinho mostra como usar o vscode com o "plugin de teletransporte" pra debugar um app flutter dentro do container.
+
+[![Debugando flutter com vscode](https://img.youtube.com/vi/xMLyS0B4cK0/0.jpg)](https://www.youtube.com/watch?v=xMLyS0B4cK0)
+
 Howto:
 
 Constrói a imagem (ou faz um docker pull)
